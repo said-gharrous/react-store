@@ -1,0 +1,87 @@
+ const handleTrOfTable = ()=>{
+        if((id && id.length > 0)&&(title && title.length > 0)&&(price && price.length > 0)&&(description && description.length > 0)
+        &&(category && category.length > 0)&&(image && image.length > 0)){
+            return(
+                <>
+                    {id.map((element,index)=>(
+                        <tr>
+                            <td key={index} >{element}</td>
+                        </tr>
+                    ))}
+                    {title.map((element,index)=>(
+                        <tr>
+                            <td key={index} >{element}</td>
+
+                        </tr>
+                    ))}
+                    {price.map((element,index)=>(
+                        <td key={index} >{element}</td>
+                    ))}
+                    {description.map((element,index)=>(
+                        <td key={index} >{element}</td>
+                    ))}
+                    {category.map((element,index)=>(
+                        <td key={index} >{element}</td>
+                    ))}
+                    {image.map((element,index)=>(
+                        <td key={index} >{element}</td>
+                    ))}
+                </>
+            )
+    }
+
+
+
+                    let idArr = [];
+                    let titleArr = [];
+                    let priceArr = [];
+                    let descriptionArr = [];
+                    let categoryArr = [];
+                    let imageArr = [];
+
+                    for(let i = 0; i < result.length ;i++){
+                        idArr.push(result[i].id);
+                        titleArr.push(result[i].title);
+                        priceArr.push(result[i].price)
+                        descriptionArr.push(result[i].description);
+                        categoryArr.push(result[i].category);
+                        imageArr.push(result[i].image);
+                    }
+
+                    setId(idArr);
+                    setTitle(titleArr);
+                    setPrice(priceArr);
+                    setDescription(descriptionArr);
+                    setCategory(categoryArr);
+                    setImage(imageArr)
+
+
+
+    const [id,setId] = useState();
+    const [title,setTitle] = useState();
+    const [price,setPrice] = useState();
+    const [description,setDescription] = useState();
+    const [category,setCategory] = useState();
+    const [image,setImage] = useState();
+
+
+                // if(tr && tr.length > 0){
+            //     tr.map((ele) => {
+            //         ele.classList.add("remove");
+            //     });
+            // }
+
+
+
+
+
+
+                    if(inputSearchValue.length > 0){
+            if(productsList && productsList.length > 0){
+                return productsList.filter((product) => {
+                    if(product.title.startsWith(inputSearchValue)){
+                        <Product product={product}/>
+                    }
+                })
+            }
+        }
